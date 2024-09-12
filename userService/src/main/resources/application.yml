@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: userService
+  datasource:
+    url: jdbc:postgresql://localhost:5432/BankingProject
+    username: postgres
+    password: test
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+    registeredWithEureka: true
+    fetchRegistry: true
+
+twilio:
+  account:
+    sid: twilio sid girilmeli
+  auth:
+    token: twilio token
+  phone:
+    number: twilio number girilmeli
